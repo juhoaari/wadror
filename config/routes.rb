@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :beers
 
   resources :breweries
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   #get 'ratings/new', to:'ratings#new'
   #post 'ratings', to: 'ratings#create'
 
+  get 'signup', to: 'users#new'
+  
   root 'breweries#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
